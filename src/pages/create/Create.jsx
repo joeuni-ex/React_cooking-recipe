@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "./Create.css";
+import { useFetch } from "../../hooks/useFetch";
 
 export default function Create() {
   const [title, setTitle] = useState("");
@@ -8,6 +9,7 @@ export default function Create() {
   const [newIngredient, setNewIngredient] = useState(""); //한 개의 재료
   const [ingredients, setIngredients] = useState([]); // 모든 재료
   const ingredientInput = useRef(); //특정 태그를 지정한다
+  const { postData, data } = useFetch("http://localhost:3030/recipes", "POST");
 
   //요리 재료 추가
   const handleAdd = (e) => {
@@ -25,7 +27,7 @@ export default function Create() {
   //레시피 추가
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title, method, cookingTime, ingredients);
+    postData({ title, ingredients, method, cookingTime: cookingTime + " 분" });
   };
 
   return (
