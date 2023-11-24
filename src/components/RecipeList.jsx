@@ -3,6 +3,9 @@ import "./RecipeList.css";
 import { Link } from "react-router-dom";
 
 export const RecipeList = ({ recipes }) => {
+  if (recipes.length === 0) {
+    return <div className="error">검색된 레시피가 없습니다.</div>;
+  }
   return (
     <div className="recipe-list">
       {recipes.map((recipe) => (
