@@ -72,6 +72,17 @@
       "method": "자른 고구마를 어쩔시구 저쩔시구 ",
       "cookingTime": "60 분",
       "id": "leUhGVW"
+    },
+    {
+      "title": "커피",
+      "ingredients": [
+        "원두",
+        "설탕",
+        "우유"
+      ],
+      "method": "우유에 설탕을 추가하고 샷을 넣는다",
+      "cookingTime": "5 분",
+      "id": "voknVlK"
     }
   ]
 }
