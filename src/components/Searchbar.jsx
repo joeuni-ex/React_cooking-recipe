@@ -12,7 +12,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="searchbar">
+    <div className="searchBar">
       <form onSubmit={handleSubmit}>
         <label htmlFor="search">검색:</label>
         <input
