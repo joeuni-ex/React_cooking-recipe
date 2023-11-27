@@ -13,7 +13,9 @@ export const RecipeList = ({ recipes }) => {
 
   //파이어베이스로 db삭제하기
   const handleClick = (id) => {
-    firedb.collection("recipes").doc(id).delete();
+    if (confirm("정말로 삭제하시겠습니까?")) {
+      firedb.collection("recipes").doc(id).delete();
+    }
   };
 
   return (
