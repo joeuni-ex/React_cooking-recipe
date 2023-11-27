@@ -1,8 +1,11 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### firebase를 활용한 쿠킹 레시피 앱
 
-Currently, two official plugins are available:
+## 새 레시피 추가,삭제 가능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 다크,라이트 모드 지원
+
+## 네브바 테마 지원
+
+배포 주소:https://react-cooking-recipe-app-joeuni.netlify.app
