@@ -19,7 +19,7 @@ export default function Home() {
       .collection("recipes") //컬렉션에서
       .get() //가져온다.
       .then((snapshot) => {
-        console.log(snapshot.docs[0].data());
+        // console.log(snapshot.docs[0].data());
         //가져온 데이터를 snapshot이라한다.
         if (snapshot.empty) {
           //데이터가 없을 때
