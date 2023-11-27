@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./SearchBar.css";
+import "./Searchbar.css";
 
-export default function SearchBar() {
+const Searchbar = () => {
   const [term, setTerm] = useState(""); //검색어
   const navigate = useNavigate();
 
@@ -23,4 +23,6 @@ export default function SearchBar() {
       </form>
     </div>
   );
-}
+};
+
+export default Searchbar;

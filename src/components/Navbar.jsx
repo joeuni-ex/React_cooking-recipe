@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import SearchBar from "./SearchBar";
+
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import Searchbar from "./SearchBar";
 
 export default function Navbar() {
   const { color } = useContext(ThemeContext);
@@ -12,7 +13,7 @@ export default function Navbar() {
         <Link to="/" className="brand">
           <h1>쿠킹 레시피</h1>
         </Link>
-        <SearchBar />
+        <Searchbar />
         <Link to="/create">레시피 만들기</Link>
       </nav>
     </div>
