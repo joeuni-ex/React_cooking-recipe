@@ -33,7 +33,7 @@ export function ThemeProvider({ children }) {
   };
   return (
     //state 모든 값과 changeColor 를 추가한다.
-    <ThemeContext.Provider value={{ ...state, changeColor, changeModeA }}>
+    <ThemeContext.Provider value={{ ...state, changeColor, changeMode }}>
       {children}
     </ThemeContext.Provider>
   );
