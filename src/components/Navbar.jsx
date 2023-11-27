@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import Searchbar from "./SearchBar";
+import Searchbar from "./Searchbar";
 
 export default function Navbar() {
   const { color } = useContext(ThemeContext);
