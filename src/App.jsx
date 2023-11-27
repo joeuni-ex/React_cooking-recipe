@@ -7,10 +7,13 @@ import Search from "./pages/search/Search";
 import Recipe from "./pages/recipe/Recipe";
 import Navbar from "./components/Navbar";
 import ThemeSelector from "./components/ThemeSelector";
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
+  const { mode } = useContext(ThemeContext);
   return (
-    <div className="App">
+    <div className={`App ${mode}`}>
       <BrowserRouter>
         <Navbar />
         <ThemeSelector />
