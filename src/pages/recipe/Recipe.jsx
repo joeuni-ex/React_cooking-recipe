@@ -15,11 +15,13 @@ export default function Recipe() {
       {isPending && <p className="loading">로딩중...</p>}
       {recipe && (
         <>
-          <h2 className="page-title">{recipe.title}</h2>
+          <h2 className={`page-title ${mode}`}>{recipe.title}</h2>
           <p className="time">요리시간 {recipe.cookingTime} 완성</p>
           <ul>
             {recipe.ingredients.map((ing) => (
-              <li key={ing}>{ing}</li>
+              <li className={`page-li ${mode}`} key={ing}>
+                {ing}
+              </li>
             ))}
           </ul>
           <p className="method">{recipe.method}</p>

@@ -40,3 +40,10 @@
   background: #555;
   color: #e4e4e4;
 }
+
+.page-title.dark {
+  color: #e4e4e4;
+}
+.page-li.dark {
+  color: #e4e4e4;
+}
