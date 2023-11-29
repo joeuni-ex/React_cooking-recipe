@@ -8,4 +8,6 @@
 
 ### 네브바 테마 지원
 
+## 반응형 CSS 추가
+
 배포 주소:https://react-cooking-recipe-app-joeuni.netlify.app
