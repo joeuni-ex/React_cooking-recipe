@@ -65,9 +65,10 @@
 
 @media screen and (max-width: 600px) {
   .recipe-list {
+    width: 100%;
     grid-template-columns: 1fr;
     grid-gap: 0px;
-    margin: 10px auto;
+    margin: 10px 5%;
   }
   .recipe-list .card {
     width: 280px;
