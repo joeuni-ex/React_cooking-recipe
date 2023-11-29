@@ -11,10 +11,12 @@ export default function Navbar() {
     <div className="navbar" style={{ backgroundColor: color }}>
       <nav>
         <Link to="/" className="brand">
-          <h1>쿠킹 레시피</h1>
+          <h1>🍳쿠킹 레시피</h1>
         </Link>
-        <Searchbar />
-        <Link to="/create">레시피 만들기</Link>
+
+        <Link to="/create" className="btn">
+          레시피 만들기
+        </Link>
       </nav>
     </div>
   );

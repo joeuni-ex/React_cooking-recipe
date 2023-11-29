@@ -3,6 +3,7 @@ import { RecipeList } from "../../components/RecipeList";
 import { firedb } from "../../firebase/config";
 
 import "./Home.css";
+import Searchbar from "../../components/Searchbar";
 
 export default function Home() {
   // const { data, isPending, error } = useFetch("http://localhost:3030/recipes"); //제이슨 서버 주소
@@ -48,6 +49,7 @@ export default function Home() {
 
   return (
     <div className="home">
+      <Searchbar />
       {error && <p className="error">{error}</p>}
       {isPending && <p className="loading">로딩중</p>}
       {data && <RecipeList recipes={data} />}

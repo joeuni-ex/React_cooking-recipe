@@ -14,11 +14,12 @@ const Searchbar = () => {
   return (
     <div className="searchBar">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="search">검색:</label>
+        <label htmlFor="search" className="searchText"></label>
         <input
           type="text"
           id="search"
           onChange={(e) => setTerm(e.target.value)}
+          placeholder="레시피를 검색하세요"
         />
       </form>
     </div>

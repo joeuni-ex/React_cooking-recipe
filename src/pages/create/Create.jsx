@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import "./Create.css";
 import { useFetch } from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { firedb } from "../../firebase/config";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export default function Create() {
   const [title, setTitle] = useState("");
@@ -11,6 +12,7 @@ export default function Create() {
   const [newIngredient, setNewIngredient] = useState(""); //한 개의 재료
   const [ingredients, setIngredients] = useState([]); // 모든 재료
   const ingredientInput = useRef(); //특정 태그를 지정한다
+  const { mode } = useContext(ThemeContext);
   //JSON 서버 DB연결
   //const { postData, data } = useFetch("http://localhost:3030/recipes", "POST");
   const navigate = useNavigate();
@@ -56,10 +58,10 @@ export default function Create() {
 
   return (
     <div className="create">
-      <h2 className="page-title">새 레시피를 추가하세요</h2>
+      <h2 className={`page-title ${mode}`}>새 레시피를 추가하세요</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          <span>요리 제목:</span>
+          <span className={`${mode}`}>요리 제목:</span>
           <input
             onChange={(e) => setTitle(e.target.value)}
             type="text"
@@ -70,7 +72,7 @@ export default function Create() {
 
         {/*요리재료*/}
         <label>
-          <span>요리 재료:</span>
+          <span className={`${mode}`}>요리 재료:</span>
           <div className="ingredients">
             <input
               type="text"
@@ -83,7 +85,7 @@ export default function Create() {
             </button>
           </div>
         </label>
-        <p>
+        <p className={`${mode}`}>
           재료들 :{" "}
           {ingredients.map((i) => (
             <em key={i}>{i}, </em>
@@ -91,7 +93,7 @@ export default function Create() {
         </p>
 
         <label>
-          <span>요리 방법:</span>
+          <span className={`${mode}`}>요리 방법:</span>
           <textarea
             onChange={(e) => setMethod(e.target.value)}
             value={method}
@@ -100,7 +102,7 @@ export default function Create() {
         </label>
 
         <label>
-          <span>쿠킹 타임 (분):</span>
+          <span className={`${mode}`}>쿠킹 타임 (분):</span>
           <input
             onChange={(e) => setCookingTime(e.target.value)}
             type="number"

@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import ThemeSelector from "./components/ThemeSelector";
 import { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
+import Searchbar from "./components/Searchbar";
 
 function App() {
   const { mode } = useContext(ThemeContext);
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <ThemeSelector />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Recipe.css";
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
@@ -50,6 +50,11 @@ export default function Recipe() {
             ))}
           </ul>
           <p className="method">{recipe.method}</p>
+          <Link to="/" className="backLink">
+            <div>
+              <button className="backBtn">뒤로가기</button>
+            </div>
+          </Link>
         </>
       )}
     </div>

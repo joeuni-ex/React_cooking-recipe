@@ -7,5 +7,16 @@
   word-break: keep-all;
 }
 .searchBar input {
-  margin-left: 10px;
+  margin-left: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .searchBar input {
+    width: 80%;
+    height: 30px;
+    font-size: 12px;
+  }
+  .search {
+    font-size: 10px;
+  }
 }

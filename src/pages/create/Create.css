@@ -23,6 +23,7 @@
   cursor: pointer;
   text-decoration: none;
   margin: 20px auto;
+  font-weight: 600;
 }
 
 .ingredients {
@@ -31,4 +32,37 @@
 }
 .ingredients button {
   margin: 0 0 0 10px;
+}
+
+/* 다크 모드 */
+.dark {
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .create {
+    margin: 0px 5%;
+  }
+  .create label span {
+    display: block;
+    font-size: 1rem;
+    margin: 30px 0 10px;
+  }
+  .create p {
+    margin-top: 10px;
+    font-size: 0.7em;
+  }
+  .create button {
+    width: 70px;
+    height: 40px;
+    font-size: 0.5em;
+    padding: 8px 20px;
+    border-radius: 4px;
+    background-color: #fea1a1;
+    margin: 20px auto;
+  }
+  .ingredients {
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
 }

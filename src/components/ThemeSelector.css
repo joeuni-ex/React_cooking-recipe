@@ -21,3 +21,9 @@
   height: 24px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+  .theme-selector {
+    margin: 10px;
+  }
+}
